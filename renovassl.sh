@@ -15,7 +15,7 @@ sleep 10
 sleep 30
  
 # Altera as permissoes para o usuário speedtest conseguir ler os certificados
-/usr/bin/chown speedtest. /etc/letsencrypt/ -R
+chown speedtest. /etc/letsencrypt/ -R
  
 # Aguarda 2 seg
 sleep 2
