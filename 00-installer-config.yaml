@@ -1,0 +1,27 @@
+# /etc/netplan
+# This is the network config written by 'clauderlanio'
+# Configuracao ip fixo
+# sudo netplan apply
+network:
+    version: 2
+    renderer: networkd
+    ethernets:
+      enp3s0:
+       dhcp4: false
+       dhcp6: false
+       addresses: [192.168.1.71/24]
+       gateway4: 192.168.1.254
+       nameservers:
+         addresses: [192.168.1.71]
+    wifis:
+        wlp1s0:
+              dhcp4: no
+              dhcp6: no
+              addresses: [10.0.0.104/24]
+              gateway4: 10.0.0.1
+              nameservers:
+                  addresses: [10.0.0.1]
+              access-points:
+                  "dark_net":
+                     password: "87ws1274"
+
